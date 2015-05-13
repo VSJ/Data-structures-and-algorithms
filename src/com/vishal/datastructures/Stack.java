@@ -34,4 +34,11 @@ public class Stack {
             System.out.println("Popped element:" + items[currentIndex]);
         }
     }
+    public void display() {
+        System.out.println("__");
+        for (int i=currentIndex-1; i>=0; i--) {
+            System.out.println("|" + items[i] + "|");
+            System.out.println("___");
+        }
+    }
 }
