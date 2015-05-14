@@ -3,16 +3,8 @@ package com.vishal.datastructures;
 /**
  * Created by vishaljadhav on 4/25/15.
  */
-class Node {
-    public char data;
-    Node next;
-    public Node(char data) {
-        this.data = data;
-        this.next = null;
-    }
-}
 public class LinkedList {
-    Node head;
+    public Node head;
     public LinkedList() {
         head = null;
     }
