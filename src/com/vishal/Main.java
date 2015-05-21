@@ -1,5 +1,6 @@
 package com.vishal;
 
+import com.vishal.datastructures.BinarySearchTree;
 import com.vishal.datastructures.LinkedList;
 import com.vishal.datastructures.Node;
 import com.vishal.datastructures.Stack;
@@ -8,19 +9,13 @@ import sun.awt.image.ImageWatched;
 public class Main {
 
     public static void main(String[] args) {
-        Stack newStack = new Stack(5);
-        LinkedList list = new LinkedList();
-        list.AddNode('1');
-        list.AddNode('2');
-        list.AddNode('3');
-        list.AddNode('4');
-        list.AddNode('3');
-        list.AddNode('2');
-        list.AddNode('1');
-        if (IsLinkedListPalindrome(list))
-            System.out.print("LinkedList is palindrone::");
-        else
-            System.out.print("LinkedList is not palindrone::");
+        BinarySearchTree tree = new BinarySearchTree(5);
+        tree.AddNode(6);
+        tree.AddNode(2);
+        tree.AddNode(3);
+        tree.AddNode(1);
+        tree.AddNode(7);
+        tree.Preoder(tree.root);
     }
     public static boolean IsLinkedListPalindrome(LinkedList list) {
         if (list.head.next == null) {
