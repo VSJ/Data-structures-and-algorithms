@@ -32,22 +32,37 @@ public class BinarySearchTree {
                 AddNode(root.left, node);
             else {
                 root.left = node;
-                return;
             }
         } else {
             if (root.right != null)
                 AddNode(root.right, node);
             else {
                 root.right = node;
-                return;
             }
         }
     }
-    public void Preoder(Node root) {
+    public void Preorder(Node root) {
         if (root == null)
             return;
         System.out.print(root.data);
-        Preoder(root.left);
-        Preoder(root.right);
+        Preorder(root.left);
+        Preorder(root.right);
+    }
+    public Boolean IsBalanced(Node root) {
+        if (root == null)
+            return false;
+        else {
+            return Math.abs(HeightOfSubTree(root.left) - HeightOfSubTree(root.right)) > 1 ? false : true;
+        }
+    }
+    public int HeightOfSubTree(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            int lDepth = HeightOfSubTree(root.left) + 1;
+            int rDept = HeightOfSubTree(root.right) + 1;
+            return lDepth > rDept ? lDepth : rDept;
+
+        }
     }
 }

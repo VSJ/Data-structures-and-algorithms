@@ -15,8 +15,24 @@ public class Main {
         tree.AddNode(3);
         tree.AddNode(1);
         tree.AddNode(7);
-        tree.Preoder(tree.root);
+        tree.AddNode(9);
+        //tree.AddNode(10);
+        tree.Preorder(tree.root);
+        System.out.print(tree.IsBalanced(tree.root));
     }
+    /*an animal shelter holds only dogs and cats, and operates on a strictly "first in, first out" basis.
+    People must adopt either the "oldest" (based on arrival time) of all animals at the shelter,
+    or they can select whether they would prefer a dog or a cat (and will receive the oldest animal of that type).
+    They cannot select which specific animal they would like. Create the data structures to maintain this system
+    and implement opera- tions such as enqueue, dequeueAny, dequeueDog and dequeueCat.
+    You may use the built-in L inkedL list data structure.
+    Algo --
+    AnimalQueue {
+      Animal animal
+
+    }
+
+    */
     public static boolean IsLinkedListPalindrome(LinkedList list) {
         if (list.head.next == null) {
             return true;
