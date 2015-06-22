@@ -8,7 +8,7 @@ public class LinkedList {
     public LinkedList() {
         head = null;
     }
-    public void AddNode(char data) {
+    public void AddNode(int data) {
         if (head == null) {
             head = new Node(data);
         }

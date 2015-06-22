@@ -1,9 +1,6 @@
 package com.vishal;
 
-import com.vishal.datastructures.BinarySearchTree;
-import com.vishal.datastructures.LinkedList;
-import com.vishal.datastructures.Node;
-import com.vishal.datastructures.Stack;
+import com.vishal.datastructures.*;
 import sun.awt.image.ImageWatched;
 
 public class Main {
@@ -19,6 +16,8 @@ public class Main {
         //tree.AddNode(10);
         tree.Preorder(tree.root);
         System.out.print(tree.IsBalanced(tree.root));
+        int[] arr = {9, 5, 2, 6, 2, 3, 12};
+        Sorting.QuickSort(arr,0,arr.length-1);
     }
     /*an animal shelter holds only dogs and cats, and operates on a strictly "first in, first out" basis.
     People must adopt either the "oldest" (based on arrival time) of all animals at the shelter,
