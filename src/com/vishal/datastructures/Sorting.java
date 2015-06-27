@@ -13,6 +13,17 @@ public class Sorting {
         }
 
     }
+    static public void MergeSort(int[] arr, int start, int end) {
+        if (start < end) {
+            int mid = (start + end) / 2;
+            MergeSort(arr,start,mid-1);
+            MergeSort(arr,mid,end);
+            Merge(arr);
+        }
+    }
+    static private void Merge(int[] arr) {
+
+    }
     static private int partition(int[] arr, int start, int end) {
         int pivotIndex = choosePivot(start, end);
         int pivot = arr[pivotIndex];

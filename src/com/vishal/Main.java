@@ -18,6 +18,32 @@ public class Main {
         System.out.print(tree.IsBalanced(tree.root));
         int[] arr = {9, 5, 2, 6, 2, 3, 12};
         Sorting.QuickSort(arr,0,arr.length-1);
+        int[] arr1 = {0,1,2,1,2,1,1,1,0,1,2,1,1,0,0,0};
+        DutchNationalFlag(arr1);
+    }
+    public static void DutchNationalFlag(int[] arr) {
+        int i = 0, j = 0, n = arr.length-1, temp;
+        while (j <= n) {
+            if (arr[j] == 0) {
+                temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+                i++;
+                j++;
+            }
+            else if (arr[j] == 2) {
+                temp = arr[j];
+                arr[j] = arr[n];
+                arr[n] = temp;
+                n--;
+            }
+            else
+                j++;
+        }
+        System.out.print("Sorted Array = >");
+        for (int k = 0; k<arr.length; k++) {
+            System.out.print(" " + arr[k]);
+        }
     }
     /*an animal shelter holds only dogs and cats, and operates on a strictly "first in, first out" basis.
     People must adopt either the "oldest" (based on arrival time) of all animals at the shelter,
