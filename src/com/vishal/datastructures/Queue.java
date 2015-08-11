@@ -1,4 +1,4 @@
-package com.vishal.datastructures;
+package com.vishal.Datastructures;
 // Algorithm -   3 2 3
 //  For empty --
     // rear = -1 or front == rear

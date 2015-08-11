@@ -1,4 +1,4 @@
-package com.vishal.datastructures;
+package com.vishal.Datastructures;
 
 /**
  * Created by vishaljadhav on 4/25/15.

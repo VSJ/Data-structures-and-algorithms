@@ -1,4 +1,4 @@
-package com.vishal.datastructures;
+package com.vishal.Datastructures;
 
 import java.util.ArrayList;
 import java.util.List;

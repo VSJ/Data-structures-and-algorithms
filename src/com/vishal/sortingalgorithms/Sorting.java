@@ -1,4 +1,4 @@
-package com.vishal.datastructures;
+package com.vishal.sortingalgorithms;
 
 /**
  * Created by vj028567 on 6/20/15.
@@ -15,14 +15,36 @@ public class Sorting {
     }
     static public void MergeSort(int[] arr, int start, int end) {
         if (start < end) {
-            int mid = (start + end) / 2;
-            MergeSort(arr,start,mid-1);
-            MergeSort(arr,mid,end);
-            Merge(arr);
+            int mid = start + (end - start) / 2;;
+            MergeSort(arr,start,mid);
+            MergeSort(arr,mid+1,end);
+            MergeArray(arr, start, mid, end);
+            Print(arr);
         }
     }
-    static private void Merge(int[] arr) {
-
+    static private void MergeArray(int[] arr, int start, int middle, int end) {
+        int[] tempMergArr = new int[arr.length];
+        for(int i = 0; i <= end; i++) {
+            tempMergArr[i] = arr[i];
+        }
+        int i = start;
+        int j = middle + 1;
+        int k = start;
+        while (i <= middle && j <= end) {
+            if (tempMergArr[i] <= tempMergArr[j]) {
+                arr[k] = tempMergArr[i];
+                i++;
+            } else {
+                arr[k] = tempMergArr[j];
+                j++;
+            }
+            k++;
+        }
+        while (i <= middle) {
+            arr[k] = tempMergArr[i];
+            k++;
+            i++;
+        }
     }
     static private int partition(int[] arr, int start, int end) {
         int pivotIndex = choosePivot(start, end);
